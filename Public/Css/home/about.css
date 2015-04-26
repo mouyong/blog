@@ -1,0 +1,13 @@
+#contant {
+    text-align: left;
+}
+
+#contant>div {
+	margin-left: 6rem;
+	margin-top: 1rem;
+}
+
+#contant>span {
+    margin-top: 2rem;
+    margin-left: 3rem;
+}

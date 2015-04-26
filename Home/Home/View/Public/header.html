@@ -1,0 +1,26 @@
+<!--引入index.css文件-->
+        <load href="__PUBLIC__/Css/home/index.css" />
+</head>
+<body>
+    <div class="container">
+<!--页眉开始-->
+    <header class="center hidden margin-top">
+        <a id="logo" href="__ROOT__"></a>
+        <!--页眉导航开始-->
+            <nav id="header_nav" class="right">
+                <!--遍历导航-->
+                <volist name="nav" id="nav">
+                <if condition="$nav.zhli eq '首　　页'">
+                <a href="__ROOT__">
+                <else />
+                <a href="__ROOT__/<{$nav.path}>">
+                </if>
+                    <span><{$nav.zhli}></span><span><{$nav.enli}></span>
+                </a>
+                </volist>
+                <!--遍历导航结束-->
+        <!--页眉导航结束-->
+            </nav>
+<!--页眉结束-->
+    </header>
+    <div id="contant" class="center clear margin-top hidden">

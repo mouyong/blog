@@ -1,0 +1,25 @@
+<a href="__ROOT__/Snail/Flink/save">添加友链</a>
+	<table>
+		<tr>
+			<th>网站名称</th>
+			<th>U R L 　</th>
+			<th>状　　态</th>
+			<th>操　　作</th>
+		</tr>
+		<volist name="flink" id="flink">
+		<tr>
+			<td><{$flink.webname}></td>
+			<td><{$flink.url}></td>
+			<td>
+			<switch name="flink.display">
+				<case value="1">显示</case>
+				<case value="0"><span class="ad">隐藏</span></case>
+			</switch>
+			</td>
+			<td>
+				<a href="__ROOT__/Snail/Flink/modify/id/<{$flink.id}>">修改</a>
+				<a href="__ROOT__/Snail/Flink/del/id/<{$flink.id}>" onclick="return confirm('真的要删除吗?此操作不可恢复!')">删除</a>
+			</td>
+		</tr>
+		</volist>
+	</table>

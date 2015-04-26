@@ -1,0 +1,11 @@
+<include file="Public/head" />
+    <!--引入article.css文件-->
+        <load href="__PUBLIC__/Css/home/article.css" />
+    <include file="Public/header" />
+    <blockquote>
+        <h1><{$article.title}></h1>
+        <p><{$article.article}></p>
+    </blockquote>
+    <span class="left">分类:<a href="__URL__/group/label/<{$article.type}>"><{$article.type}></a></span>
+    <span class="right"><{$article.posttime|date="Y-m-d h:i:s",###}></span>
+<include file="Public/footer" />

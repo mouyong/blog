@@ -1,0 +1,30 @@
+<include file="Public/head" />
+    <include file="Public/wrapper" />
+    <form action="__ROOT__/Snail/Nav/update" method="post" style="margin:0 auto;width:80%">
+			<input type="hidden" name="id" value="<{$id}>" />
+		模　　块:<switch name="navls.model">
+				 <case value="1">
+				 	<input type="radio" name="model" value="1" id="mdho" checked /><label for="mdho">前台</label>
+					<input type="radio" name="model" value="0" id="mdad" /><label for="mdad">后台</label>
+				 </case>
+			     <case value="0">
+					<input type="radio" name="model" value="1" id="mdho" /><label for="mdho">前台</label>
+			     	<input type="radio" name="model" value="0" id="mdad" checked /><label for="mdad">后台</label>
+			     </case>
+			     </switch><br />
+		中文列表:<input type="text" name="zhli" value="<{$navls.zhli}>" /><br />
+		英文列表:<input type="text" name="enli" value="<{$navls.enli}>" /><br />
+		路　　径:<input type="text" name="path" value="<{$navls.path}>" /><br />
+		状　　态:<switch name="navls.display">
+				<case value="1">
+				<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
+				 <input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label>
+				</case>
+				<case value="0">
+				 <input type="radio" id="block" name="display" value="1" /><label for="block">显示</label>
+				 <input type="radio" id="none" name="display" value="0" checked /><label for="none">隐藏</label>
+				</case>
+				 </switch><br />
+				 <input type="submit" value="" style="background:url(__PUBLIC__/Images/b02.gif) no-repeat;width:40px;height:25px;border:0;" />
+	</form>
+<include file="Public/footer" />
