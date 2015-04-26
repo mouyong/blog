@@ -1,0 +1,29 @@
+<form action="__ROOT__/Snail/Index/update" method="post" style="margin:0 auto;width:80%">
+		<input type="hidden" name="id" value="<{$id}>" />
+	标题:<input type="text" name="title" value="<{$article.title}>" /><br />
+	类型:<switch name="article.type">
+		 <case value="blog">
+		 	<input type="radio" name="type" value="blog" id="blog" checked /><label for="blog">Blog</label>
+			<input type="radio" name="type" value="left" id="left" /><label for="left">Left</label>
+		 </case>
+	     <case value="left">
+			<input type="radio" name="type" value="blog" id="blog" /><label for="blog">Blog</label>
+	     	<input type="radio" name="type" value="left" id="left" checked /><label for="left">Left</label>
+	     </case>
+	     </switch><br />
+	标签:<input type="text" name="label" value="<{$article.label}>" /><br />
+	文章:<!-- 加载编辑器的容器 -->
+	     <script id="ueditor" name="article" type="text/plain"><{$article.article}></script>
+	状态:<switch name="article.display">
+		<case value="1">
+		<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
+		 <input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label>
+		</case>
+		<case value="0">
+		 <input type="radio" id="block" name="display" value="1" /><label for="block">显示</label>
+		 <input type="radio" id="none" name="display" value="0" checked /><label for="none">隐藏</label>
+		</case>
+		 </switch><br />
+	     <input type="submit" value="" style="background:url(__PUBLIC__/Images/b02.gif) no-repeat;width:40px;height:25px;border:0;" />
+	     <include file="Public/ueditor" />
+</form>

@@ -1,0 +1,81 @@
+#left_container {
+    width: 70%;
+}
+
+blockquote {
+    border: 0.0625rem solid #E0DFCC;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    margin: 0 2rem 2rem;
+    text-align: left;
+    min-height: 10rem;
+}
+
+blockquote>a {
+    font-size: 1.5rem;
+    border-radius: 0.3125rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+blockquote>a:hover {
+    text-decoration: underline;
+}
+
+blockquote>div {
+    min-height: 3.125rem;
+    max-height: 3.125rem;
+}
+
+blockquote>div.first {
+    word-break: break-all;
+}
+blockquote>span {
+    padding-top: 2.5rem;
+}
+
+blockquote>span>a {
+    display: inline-block;
+}
+
+#contant>aside {
+    width: 28%;
+}
+
+aside hr {
+    width: 75%;
+    margin: 1rem auto 0.5rem;
+}
+
+#label_cloud {
+    margin: 0 0.3125rem 1rem;
+    padding-top: 1rem;
+    min-height: 8.125rem;
+    border: 0.0625rem solid #E0DFCC;
+    border-radius: 1rem;
+}
+
+.label {
+    text-align: left;
+    padding-left: 28px;
+}
+
+.label>span {
+    display: inline-block;
+    margin: 0.5rem;
+    width: 3.125rem;
+    text-align: center;
+    border: 0.0625rem solid #E0DFCC;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    height: 1.5625rem;
+    line-height: 1.5625rem;
+}
+
+.label>span:hover {
+    background: #E6E6E6;
+}
+
+.label>span:active {
+    background: #D2D2D2;
+}
