@@ -1,0 +1,19 @@
+blockquote {
+    border-radius: 1.25rem;
+    margin: 0 2rem 2rem;
+    padding: 1rem;
+    text-align: left;
+    min-height: 18rem;
+}
+
+blockquote h1 {
+    text-align: center;
+}
+
+blockquote~span>a {
+    display: inline-block;
+}
+
+blockquote~span {
+    margin-right: 3.125rem; 
+}

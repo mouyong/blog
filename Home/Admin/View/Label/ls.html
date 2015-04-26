@@ -1,0 +1,25 @@
+<a href="__ROOT__/Snail/Label/save">添加标签</a>
+	<table>
+		<tr>
+			<th>标签云</th>
+			<th>标签</th>
+			<th>状态</th>
+			<th>操作</th>
+		</tr>
+		<volist name="label" id="label">
+		<tr>
+			<td><{$label.labels}></td>
+			<td><{$label.label}></td>
+			<td>
+			<switch name="label.display">
+				<case value="1">显示</case>
+				<case value="0"><span class="ad">隐藏</span></case>
+			</switch>
+			</td>
+			<td>
+				<a href="__ROOT__/Snail/Label/modify/id/<{$label.id}>">修改</a>
+				<a href="__ROOT__/Snail/Label/del/id/<{$label.id}>" onclick="return confirm('真的要删除吗?此操作不可恢复!')">删除</a>
+			</td>
+		</tr>
+		</volist>
+	</table>

@@ -1,0 +1,11 @@
+<div id="latest">
+    <h2>最新文章</h2>
+    <volist name="article" id="article">
+    <blockquote class="hidden">
+        <a href="__ROOT__/Home/Index/article/id/<{$article.id}>"><{$article.title}></a>
+        <div class="first"><{$article.article|stristr=###, '</p>', true}></div>
+        <span class="left">分类:<a href="__ROOT__/Home/Index/group/label/<{$article.type}>" class="rotate"><{$article.type}></a></span>
+        <span class="right"><{$article.posttime|date="Y-m-d h:i:s",###}></span>
+    </blockquote>
+    </volist>
+</div>

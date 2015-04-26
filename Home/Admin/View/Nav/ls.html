@@ -1,0 +1,34 @@
+<a href="__ROOT__/Snail/Nav/save">添加导航</a>
+	<table>
+		<tr>
+			<th>模块</th>
+			<th>中文</th>
+			<th>英文</th>
+			<th>路径</th>
+			<th>状态</th>
+			<th>操作</th>
+		</tr>
+		<volist name="navls" id="navls">
+		<tr>
+			<td>
+			<switch name="navls.model">
+				<case value="1"><span>前台</span></case>
+				<case value="0"><span class="ad">后台</span></case>
+			</switch>
+			</td>
+			<td><{$navls.zhli}></td>
+			<td><{$navls.enli}></td>
+			<td><{$navls.path}></td>
+			<td>
+			<switch name="navls.display">
+				<case value="1">显示</case>
+				<case value="0"><span class="ad">隐藏</span></case>
+			</switch>
+			</td>
+			<td>
+				<a href="__ROOT__/Snail/Nav/modify/id/<{$navls.id}>">修改</a>
+				<a href="__ROOT__/Snail/Nav/del/id/<{$navls.id}>" onclick="return confirm('真的要删除吗?此操作不可恢复!')">删除</a>
+			</td>
+		</tr>
+		</volist>
+	</table>

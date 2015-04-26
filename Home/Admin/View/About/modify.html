@@ -1,0 +1,21 @@
+<include file="Public/head" />
+    <include file="Public/wrapper" />
+    <form action="__ROOT__/Snail/About/update" method="post" style="margin:0 auto;width:80%">
+			<input type="hidden" name="id" value="<{$id}>" />
+		Key:<input type="text" name="key" value="<{$about.key}>" /><br />
+		Value:<!-- 加载编辑器的容器 -->
+		     <script id="ueditor" name="value" type="text/plain"><{$about.value}></script>
+		状　　态:<switch name="about.display">
+				<case value="1">
+				<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
+				 <input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label>
+				</case>
+				<case value="0">
+				 <input type="radio" id="block" name="display" value="1" /><label for="block">显示</label>
+				 <input type="radio" id="none" name="display" value="0" checked /><label for="none">隐藏</label>
+				</case>
+				 </switch><br />
+				 <input type="submit" value="" style="background:url(__PUBLIC__/Images/b02.gif) no-repeat;width:40px;height:25px;border:0;" />
+				 <include file="Public/ueditor" />
+	</form>
+<include file="Public/footer" />
