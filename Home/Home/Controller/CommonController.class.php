@@ -77,7 +77,9 @@ class CommonController extends \Think\Controller {
     /**
      * 空操作
      */
-    public function _empty() {
-        E("404--未找到该操作:".ACTION_NAME);
+    protected function _empty() {
+        header("HTTP/1.0 404 Not Found");
+        header("Location: ../Public/404.html");
+        // E("404--未找到该操作:".ACTION_NAME);
     }
 }

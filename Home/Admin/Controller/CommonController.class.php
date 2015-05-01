@@ -7,7 +7,7 @@ class CommonController extends \Think\Controller {
     /**
      * 生成验证码
      */
-    public function code() {
+    protected function code() {
         $config = array('length'=>4,'imageW'=>0,'imageH'=>0,'useNoise'=>true,'fontSize'=>25,);
 
         $Verify = new \Think\Verify($config);
@@ -104,8 +104,10 @@ class CommonController extends \Think\Controller {
     /**
      * 空操作
      */
-    public function _empty() {
-        E("404--未找到该操作:".ACTION_NAME);
+    protected function _empty() {
+        header("HTTP/1.0 404 Not Found");
+        header("Location: ../Public/404.html");
+        // $this->show("404--未找到该操作:".ACTION_NAME);
     }
 
     /**
