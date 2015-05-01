@@ -47,11 +47,4 @@ class LabelController extends CommonController {
 	public function index() {
         parent::_ls('label', 'id, labels, label, display');
 	}
-
-    /**
-     * 空操作
-     */
-    public function _empty() {
-        $this->show("404--未找到该操作:".ACTION_NAME);
-    }
 }
