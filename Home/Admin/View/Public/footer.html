@@ -1,17 +1,17 @@
-	</div>
-    </div>
-    <load href="__PUBLIC__/Js/index.js" />
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <load href="__PUBLIC__/Js/index.js" />
         <load href="__PUBLIC__/Js/append.js" />
         <script>
         $(function(){
             var obj=null;
-            var As=document.getElementById('wrapper_nav').getElementsByTagName('a');
+            var As=document.getElementById('navbar').getElementsByTagName('a');
             obj = As[0];
             for(i=1;i<As.length;i++){
                 if(window.location.href.indexOf(As[i].href)>=0)
                 obj=As[i];
             }
-            obj.id='selected';
+            obj.parentNode.className='active';
         });
         </script>
     </body>

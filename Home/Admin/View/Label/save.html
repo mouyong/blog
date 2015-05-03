@@ -1,10 +1,24 @@
 <include file="Public/head" />
-    <include file="Public/wrapper" />
-	<form action="__ROOT__/Snail/Nav/add" method="post" style="margin:0 auto;width:80%">
-	    标签云:<input type="text" name="labels" value="" /><br />
-		标　签:<input type="text" name="label" /><br />
-		状　态:<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
-				<input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label><br />
-				<input type="submit" value="" style="background:url(__PUBLIC__/Images/b02.gif) no-repeat;width:40px;height:25px;border:0;" />
+    <include file="Public/nav" />
+	<form action="__ROOT__/Snail/Nav/add" method="post" class="container">
+		<table class="table">
+			<caption>Add a new Lable</caption>
+			<tr>
+				<td>
+				    <input type="text" name="labels" placeholder="Label cloud" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				    <input type="text" name="label" placeholder="Label" />
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
+					<input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label>
+				</td>
+			</tr>
+		</table>
+			<input type="submit" value="Add" />
 	</form>
 <include file="Public/footer" />

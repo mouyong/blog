@@ -1,10 +1,10 @@
-<a href="__ROOT__/Snail/Flink/save">添加友链</a>
-	<table>
+<a href="__ROOT__/Snail/Flink/save" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+	<table class="table table-striped">
 		<tr>
-			<th>网站名称</th>
-			<th>U R L 　</th>
-			<th>状　　态</th>
-			<th>操　　作</th>
+			<th class="col-md-3">网站名称</th>
+			<th class="col-md-3">U R L 　</th>
+			<th class="col-md-3">状　　态</th>
+			<th class="col-md-3">操　　作</th>
 		</tr>
 		<volist name="flink" id="flink">
 		<tr>
@@ -13,12 +13,12 @@
 			<td>
 			<switch name="flink.display">
 				<case value="1">显示</case>
-				<case value="0"><span class="ad">隐藏</span></case>
+				<case value="0"><span class="none">隐藏</span></case>
 			</switch>
 			</td>
 			<td>
-				<a href="__ROOT__/Snail/Flink/modify/id/<{$flink.id}>">修改</a>
-				<a href="__ROOT__/Snail/Flink/del/id/<{$flink.id}>" onclick="return confirm('真的要删除吗?此操作不可恢复!')">删除</a>
+				<a href="__ROOT__/Snail/Flink/modify/id/<{$flink.id}>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="__ROOT__/Snail/Flink/del/id/<{$flink.id}>" class="btn btn-danger" onclick="return confirm('真的要删除吗?此操作不可恢复!')"><span class="glyphicon glyphicon-remove"></span></a>
 			</td>
 		</tr>
 		</volist>

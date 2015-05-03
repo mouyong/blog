@@ -1,18 +1,14 @@
 <include file="Public/head" />
-    <!--引入summary.css文件-->
-        <load href="__PUBLIC__/Css/home/summary.css" />
-        <!--引入页眉-->
     <include file="Public/header" />
-        <aside class="left">
-        <!--引入天气模块-->
-            <include file="Public/weather" />
-        <!--引入标签云模块-->
-            <include file="Public/label_cloud" />
-        </aside>
-        <section class="right">
-        <!--引入最新文章-->
-            <include file="Public/latest" />
-            <include file="Public/page" />
-        </section>
-        <!--引入页脚-->
+    <div class="container">
+        <div class="row">
+            <p class="col-md-8"><b>最新文章</b></p>
+    		<section class="col-md-8">
+    			<include file="Public/latest" />
+    		</section>
+            <aside class="col-md-3 col-md-offset-1">
+                <include file="Public/label_cloud" />
+            </aside>
+    	</div>
+    </div>
 <include file="Public/footer" />

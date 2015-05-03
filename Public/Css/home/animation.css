@@ -1,0 +1,22 @@
+nav.container a:hover span:last-child {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav.container a span:last-child {
+    display: block;
+    color: #999;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s;
+    opacity: 0;
+}
+
+/*旋转动画*/
+.rotate {
+    transition: all 0.5s ease 0s;
+}
+.rotate:hover {
+    transition: all 0.5s ease-in-out 0s;
+    transform: rotate(360deg);
+}

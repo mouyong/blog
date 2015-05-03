@@ -1,10 +1,10 @@
-<a href="__ROOT__/Snail/Label/save">添加标签</a>
-	<table>
+<a href="__ROOT__/Snail/Label/save" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+	<table class="table table-striped">
 		<tr>
-			<th>标签云</th>
-			<th>标签</th>
-			<th>状态</th>
-			<th>操作</th>
+			<th class="col-md-3">标签云</th>
+			<th class="col-md-3">标签</th>
+			<th class="col-md-3">状态</th>
+			<th class="col-md-3">操作</th>
 		</tr>
 		<volist name="label" id="label">
 		<tr>
@@ -13,12 +13,12 @@
 			<td>
 			<switch name="label.display">
 				<case value="1">显示</case>
-				<case value="0"><span class="ad">隐藏</span></case>
+				<case value="0"><span class="none">隐藏</span></case>
 			</switch>
 			</td>
 			<td>
-				<a href="__ROOT__/Snail/Label/modify/id/<{$label.id}>">修改</a>
-				<a href="__ROOT__/Snail/Label/del/id/<{$label.id}>" onclick="return confirm('真的要删除吗?此操作不可恢复!')">删除</a>
+				<a href="__ROOT__/Snail/Label/modify/id/<{$label.id}>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="__ROOT__/Snail/Label/del/id/<{$label.id}>" class="btn btn-danger" onclick="return confirm('真的要删除吗?此操作不可恢复!')"><span class="glyphicon glyphicon-remove"></span></a>
 			</td>
 		</tr>
 		</volist>

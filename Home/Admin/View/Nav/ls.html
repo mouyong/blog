@@ -1,12 +1,12 @@
-<a href="__ROOT__/Snail/Nav/save">添加导航</a>
-	<table>
+<a href="__ROOT__/Snail/Nav/save" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+	<table class="table table-striped">
 		<tr>
-			<th>模块</th>
-			<th>中文</th>
-			<th>英文</th>
-			<th>路径</th>
-			<th>状态</th>
-			<th>操作</th>
+			<th class="col-md-2">模块</th>
+			<th class="col-md-2">中文</th>
+			<th class="col-md-2">英文</th>
+			<th class="col-md-2">路径</th>
+			<th class="col-md-2">状态</th>
+			<th class="col-md-2">操作</th>
 		</tr>
 		<volist name="navls" id="navls">
 		<tr>
@@ -22,12 +22,12 @@
 			<td>
 			<switch name="navls.display">
 				<case value="1">显示</case>
-				<case value="0"><span class="ad">隐藏</span></case>
+				<case value="0"><span class="none">隐藏</span></case>
 			</switch>
 			</td>
 			<td>
-				<a href="__ROOT__/Snail/Nav/modify/id/<{$navls.id}>">修改</a>
-				<a href="__ROOT__/Snail/Nav/del/id/<{$navls.id}>" onclick="return confirm('真的要删除吗?此操作不可恢复!')">删除</a>
+				<a href="__ROOT__/Snail/Nav/modify/id/<{$nav.id}>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="__ROOT__/Snail/Nav/del/id/<{$nav.id}>" class="btn btn-danger" onclick="return confirm('真的要删除吗?此操作不可恢复!')"><span class="glyphicon glyphicon-remove"></span></a>
 			</td>
 		</tr>
 		</volist>

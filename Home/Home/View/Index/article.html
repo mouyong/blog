@@ -1,11 +1,22 @@
 <include file="Public/head" />
-    <!--引入article.css文件-->
-        <load href="__PUBLIC__/Css/home/article.css" />
     <include file="Public/header" />
-    <blockquote>
-        <h1><{$article.title}></h1>
-        <p><{$article.article}></p>
-    </blockquote>
-    <span class="left">分类:<a href="__URL__/group/label/<{$article.type}>"><{$article.type}></a></span>
-    <span class="right"><{$article.posttime|date="Y-m-d h:i:s",###}></span>
+    <div class="container">
+        <div class="row">
+    		<section class="col-md-8">
+    			<article class="panel panel-info">
+					<header class="panel-heading text-center">
+						<p><b><{$article.title}></b></p>
+					</header>
+					<div id="panel-body" class="panel-body"><{$article.article}></div>
+					<footer class="panel-footer">
+					    分类:<a href="__ROOT__/Home/Index/group/label/<{$article.type}>" class="rotate"><{$article.type}></a>
+					    <span class="pull-right"><{$article.posttime|date="Y-m-d h:i:s",###}></span>
+					</footer>
+				</article>
+    		</section>
+            <aside class="col-md-3 col-md-offset-1">
+                <include file="Public/label_cloud" />
+            </aside>
+    	</div>
+    </div>
 <include file="Public/footer" />

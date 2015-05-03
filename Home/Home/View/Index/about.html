@@ -1,9 +1,10 @@
 <include file="Public/head" />
-    <!--引入about.css文件-->
-        <load href="__PUBLIC__/Css/home/about.css" />
+	    <load href="__PUBLIC__/Css/home/about.css" />
     <include file="Public/header" />
-    <h1>Just of me</h1>
-    <volist name="about" id="about">
-    <span><{$about.key}></span>:<div><{$about.value}></div><br />
-    </volist>
+    <div class="container">
+	    <h1>Just of me</h1>
+	    <volist name="about" id="about">
+	    <span><{$about.key}>:</span><div><{$about.value}></div><br />
+	    </volist>
+    </div>
 <include file="Public/footer" />

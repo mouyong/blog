@@ -1,19 +1,34 @@
 <include file="Public/head" />
-    <include file="Public/wrapper" />
-    <form action="__ROOT__/Snail/Label/update" method="post" style="margin:0 auto;width:80%">
+    <include file="Public/nav" />
+    <form action="__ROOT__/Snail/Label/update" method="post" class="container">
+    	<table class="table">
+    		<caption>Modified a Label</caption>
 			<input type="hidden" name="id" value="<{$id}>" />
-		标签云:<input type="text" name="labels" value="<{$label.labels}>" /><br />
-		标  签:<input type="text" name="label" value="<{$label.label}>" /><br />
-		状　态:<switch name="label.display">
-				<case value="1">
-				<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
-				 <input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label>
-				</case>
-				<case value="0">
-				 <input type="radio" id="block" name="display" value="1" /><label for="block">显示</label>
-				 <input type="radio" id="none" name="display" value="0" checked /><label for="none">隐藏</label>
-				</case>
-				 </switch><br />
-				 <input type="submit" value="" style="background:url(__PUBLIC__/Images/b02.gif) no-repeat;width:40px;height:25px;border:0;" />
+			<tr>
+				<td>
+					<input type="text" name="labels" value="<{$label.labels}>" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="label" value="<{$label.label}>" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<switch name="label.display">
+						<case value="1">
+							<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
+							<input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label>
+						</case>
+						<case value="0">
+							<input type="radio" id="block" name="display" value="1" /><label for="block">显示</label>
+							<input type="radio" id="none" name="display" value="0" checked /><label for="none">隐藏</label>
+						</case>
+					</switch>
+				</td>
+			</tr>
+		</table>
+			<input type="submit" value="Modified" />
 	</form>
 <include file="Public/footer" />

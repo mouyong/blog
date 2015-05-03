@@ -1,12 +1,26 @@
 <include file="Public/head" />
-    <include file="Public/wrapper" />
-	<form action="__ROOT__/Snail/About/add" method="post" style="margin:0 auto;width:80%">
-	    Key:<input type="text" name="key" /><br />
-		Value:<!-- 加载编辑器的容器 -->
-		     <script id="ueditor" name="value" type="text/plain"></script>
-		状　　态:<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
-				 <input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label><br />
-				 <input type="submit" value="" style="background:url(__PUBLIC__/Images/b02.gif) no-repeat;width:40px;height:25px;border:0;" />
-				 <include file="Public/ueditor" />
+    <include file="Public/nav" />
+	<form action="__ROOT__/Snail/About/add" method="post" class="container">
+		<table class="table">
+			<caption>Add a new About</caption>
+			<tr>
+			    <td>
+				    <input type="text" name="key" placeholder="Key" />
+			    </td>
+			</tr>
+			<tr>
+			    <td class="col-xs-12">
+			    	<script id="ueditor" name="value" type="text/plain"></script>
+					<include file="Public/ueditor" />
+			    </td>
+			</tr>
+			<tr>
+			    <td>
+				    <input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
+					<input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label>
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="Add" />
 	</form>
 <include file="Public/footer" />

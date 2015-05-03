@@ -1,10 +1,13 @@
 <include file="Public/head" />
-    <!--引入summary.css文件-->
-        <load href="__PUBLIC__/Css/home/summary.css" />
     <include file="Public/header" />
-    <include file="Public/summary" />
-    <aside class="right">
-    <!--引入标签云模块-->
-        <include file="Public/label_cloud" />
-    </aside>
+    <div class="container">
+        <div class="row">
+    		<section class="col-md-8">
+    			<include file="Public/summary" />
+    		</section>
+            <aside class="col-md-3 col-md-offset-1">
+                <include file="Public/label_cloud" />
+            </aside>
+    	</div>
+    </div>
 <include file="Public/footer" />

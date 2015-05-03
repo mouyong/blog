@@ -1,24 +1,24 @@
-<a href="__ROOT__/Snail/About/save">添加About</a>
-	<table>
+<a href="__ROOT__/Snail/About/save" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+	<table class="table table-striped">
 		<tr>
-			<th>Key</th>
-			<th>Value</th>
-			<th>状　　态</th>
-			<th>操　　作</th>
+			<th class="col-md-3">Key</th>
+			<th class="col-md-3">Value</th>
+			<th class="col-md-3">状　　态</th>
+			<th class="col-md-3">操　　作</th>
 		</tr>
 		<volist name="about" id="about">
 		<tr>
 			<td><{$about.key}></td>
-			<td class="first"><{$about.value|mb_substr=0,10,'utf8'}></td>
+			<td class="summary"><{$about.value|mb_substr=0,10,'utf8'}></td>
 			<td>
 			<switch name="about.display">
 				<case value="1">显示</case>
-				<case value="0"><span class="ad">隐藏</span></case>
+				<case value="0"><span class="none">隐藏</span></case>
 			</switch>
 			</td>
 			<td>
-				<a href="__ROOT__/Snail/About/modify/id/<{$about.id}>">修改</a>
-				<a href="__ROOT__/Snail/About/del/id/<{$about.id}>" onclick="return confirm('真的要删除吗?此操作不可恢复!')">删除</a>
+				<a href="__ROOT__/Snail/About/modify/id/<{$about.id}>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="__ROOT__/Snail/About/del/id/<{$about.id}>" class="btn btn-danger" onclick="return confirm('真的要删除吗?此操作不可恢复!')"><span class="glyphicon glyphicon-remove"></span></a>
 			</td>
 		</tr>
 		</volist>

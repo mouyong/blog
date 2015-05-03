@@ -1,13 +1,36 @@
 <include file="Public/head" />
-    <include file="Public/wrapper" />
-	<form action="__ROOT__/Snail/Nav/add" method="post" style="margin:0 auto;width:80%">
-	    模　　块:<input type="radio" name="model" value="1" id="mdho" /><label for="mdho">前台</label>
-				<input type="radio" name="model" value="0" id="mdad" /><label for="mdad">后台</label><br />
-		中文列表:<input type="text" name="zhli" value="" /><br />
-		英文列表:<input type="text" name="enli" /><br />
-		路　　径:<input type="text" name="path" /><br />
-		状　　态:<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
-				 <input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label><br />
-				 <input type="submit" value="" style="background:url(__PUBLIC__/Images/b02.gif) no-repeat;width:40px;height:25px;border:0;" />
+    <include file="Public/nav" />
+	<form action="__ROOT__/Snail/Nav/add" method="post" class="container">
+		<table class="table">
+			<caption>Add a new Nav</caption>
+			<tr>
+				<td>
+					<input type="radio" name="model" value="1" id="mdho" /><label for="mdho">前台</label>
+					<input type="radio" name="model" value="0" id="mdad" /><label for="mdad">后台</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="zhli" placeholder="Zhli" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="enli" placeholder="Ehli" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="path" placeholder="Path" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
+					<input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label>
+				</td>
+			</tr>
+		 </table>
+			 <input type="submit" value="Add" />
 	</form>
 <include file="Public/footer" />

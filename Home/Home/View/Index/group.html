@@ -1,8 +1,15 @@
 <include file="Public/head" />
-    <!--引入summary.css文件-->
-        <load href="__PUBLIC__/Css/home/summary.css" />
-    <!--引入group.css文件-->
-        <load href="__PUBLIC__/Css/home/group.css" />
     <include file="Public/header" />
-    <include file="Public/group" />
+    <div class="container">
+        <div class="row">
+        <p class="col-md-8">标签:&nbsp;<span><{$labels}></span></p>
+    		<section class="col-md-8">
+    			<include file="Public/group" />
+                <include file="Public/page" />
+    		</section>
+            <aside class="col-md-3 col-md-offset-1">
+                <include file="Public/label_cloud" />
+            </aside>
+    	</div>
+    </div>
 <include file="Public/footer" />

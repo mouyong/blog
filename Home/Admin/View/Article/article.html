@@ -1,28 +1,28 @@
-<a href="__ROOT__/Snail/Index/save">添加博文</a>
-	<table>
+<a href="__ROOT__/Snail/Index/save" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+	<table class="table table-striped">
 		<tr>
-			<th>标题</th>
-			<th>类型</th>
-			<th>标签</th>
-			<th>文章内容</th>
-			<th>状态</th>
-			<th>操作</th>
+			<th class="col-md-2">标题</th>
+			<th class="col-md-1">类型</th>
+			<th class="col-md-1">标签</th>
+			<th class="col-md-5">文章内容</th>
+			<th class="col-md-1">状态</th>
+			<th class="col-md-2">操作</th>
 		</tr>
 		<volist name="article" id="article">
 		<tr>
 			<td><{$article.title}></td>
 			<td><{$article.type}></td>
 			<td><{$article.label}></td>
-			<td class="first"><{$article.article|stristr=###, '</p>', true}></td>
+			<td class="summary"><{$article.article|stristr=###, '</p>', true}></td>
 			<td>
 			<switch name="article.display">
 				<case value="1">显示</case>
-				<case value="0"><span class="ad">隐藏</span></case>
+				<case value="0"><span class="none">隐藏</span></case>
 			</switch>
 			</td>
 			<td>
-				<a href="__ROOT__/Snail/Index/modify/id/<{$article.id}>">修改</a>
-				<a href="__ROOT__/Snail/Index/del/id/<{$article.id}>" onclick="return confirm('真的要删除吗?此操作不可恢复!')">删除</a>
+				<a href="__ROOT__/Snail/Index/modify/id/<{$article.id}>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="__ROOT__/Snail/Index/del/id/<{$article.id}>" class="btn btn-danger" onclick="return confirm('真的要删除吗?此操作不可恢复!')"><span class="glyphicon glyphicon-remove"></span></a>
 			</td>
 		</tr>
 		</volist>
