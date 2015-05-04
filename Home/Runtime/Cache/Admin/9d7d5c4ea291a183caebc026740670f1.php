@@ -11,22 +11,22 @@
     </head>
     <body>
     	<div class="modal fade" id="warning" tabindex="-1">
-			  <div class="modal-dialog">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title text-danger" id="myModalLabel">Warning</h4>
-			      </div>
-			      <div class="modal-body text-danger bg-danger">
-			        Are you sure to delete?
-			      </div>
-			      <div class="modal-footer">
-			        <a href="/blog/Snail/Index/del/id/<?php echo ($article["id"]); ?>" class="btn btn-danger">Yes</a>
-			        <button class="btn btn-default" data-dismiss="modal">No</button>
-			      </div>
-			    </div>
-			  </div>
-			</div>
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title text-danger" id="myModalLabel">Warning</h4>
+		      </div>
+		      <div class="modal-body text-danger bg-danger">
+		        Are you sure to delete?
+		      </div>
+		      <div class="modal-footer">
+		        <a href="/blog/Snail/Index/del/id/<?php echo ($article["id"]); ?>" class="btn btn-danger">Yes</a>
+		        <button class="btn btn-default" data-dismiss="modal">No</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 	<div class="container">
 		<header class="navbar navbar-default navbar-fixed-top">
 	<nav class="container">

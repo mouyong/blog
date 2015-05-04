@@ -5,10 +5,28 @@
         <title>蜗牛-个人博客后台管理页面</title>
         <link rel="shortcut icon" type="image/x-icon" href="/blog/Public/Images/favicon.ico" />
         <script type="text/javascript" src="/blog/Public/Js/jquery.js"></script>
-        <link rel="stylesheet" href="/blog/Public/Css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="/blog/Public/Css/bootstrap.min.css"> -->
         <link rel="stylesheet" type="text/css" href="/blog/Public/Css/admin/admin.css" />
     </head>
     <body>
+    	<div class="modal fade" id="warning" tabindex="-1">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title text-danger" id="myModalLabel">Warning</h4>
+		      </div>
+		      <div class="modal-body text-danger bg-danger">
+		        Are you sure to delete?
+		      </div>
+		      <div class="modal-footer">
+		        <a href="/blog/Snail/Index/del/id/<?php echo ($article["id"]); ?>" class="btn btn-danger">Yes</a>
+		        <button class="btn btn-default" data-dismiss="modal">No</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
     
     <!DOCTYPE html>
 <html lang="en">
@@ -17,10 +35,28 @@
         <title>蜗牛-个人博客后台管理页面</title>
         <link rel="shortcut icon" type="image/x-icon" href="/blog/Public/Images/favicon.ico" />
         <script type="text/javascript" src="/blog/Public/Js/jquery.js"></script>
-        <link rel="stylesheet" href="/blog/Public/Css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="/blog/Public/Css/bootstrap.min.css"> -->
         <link rel="stylesheet" type="text/css" href="/blog/Public/Css/admin/admin.css" />
     </head>
     <body>
+    	<div class="modal fade" id="warning" tabindex="-1">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title text-danger" id="myModalLabel">Warning</h4>
+		      </div>
+		      <div class="modal-body text-danger bg-danger">
+		        Are you sure to delete?
+		      </div>
+		      <div class="modal-footer">
+		        <a href="/blog/Snail/Index/del/id/<?php echo ($article["id"]); ?>" class="btn btn-danger">Yes</a>
+		        <button class="btn btn-default" data-dismiss="modal">No</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
     <header class="navbar navbar-default navbar-fixed-top">
 	<nav class="container">
 		<div class="navbar-header">
@@ -73,7 +109,7 @@
 <script id="ueditor" name="content" type="text/plain"></script>
 <!-- 实例化编辑器 -->
 <script type="text/javascript">
-    var ue = UE.getEditor('ueditor');
+  var ue = UE.getEditor('ueditor');
 </script>
 				</td>
 			</tr>

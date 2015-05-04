@@ -34,17 +34,17 @@
     /* 截图工具上传 */
     "snapscreenActionName": "uploadimage", /* 执行上传截图的action名称 */
     "snapscreenPathFormat": "/snail/Uploads/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
-    "snapscreenurlprefix": "", /* 图片访问路径前缀 */
-    "snapscreeninsertalign": "none", /* 插入的图片浮动方式 */
+    "snapscreenUrlPrefix": "", /* 图片访问路径前缀 */
+    "snapscreenInsertAlign": "none", /* 插入的图片浮动方式 */
 
     /* 抓取远程图片配置 */
-    "catcherlocaldomain": ["127.0.0.1", "localhost", "img.baidu.com"],
-    "catcheractionname": "catchimage", /* 执行抓取远程图片的action名称 */
-    "catcherfieldname": "source", /* 提交的图片列表表单名称 */
-    "catcherpathformat": "/snail/Uploads/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
-    "catcherurlprefix": "", /* 图片访问路径前缀 */
-    "catchermaxsize": 2048000, /* 上传大小限制，单位b */
-    "catcherallowfiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* 抓取图片格式显示 */
+    "catcherLocalDomain": ["127.0.0.1", "localhost", "img.baidu.com"],
+    "catcherActionName": "catchimage", /* 执行抓取远程图片的action名称 */
+    "catcherFieldName": "source", /* 提交的图片列表表单名称 */
+    "catcherPathFormat": "/snail/Uploads/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
+    "catcherUrlPrefix": "", /* 图片访问路径前缀 */
+    "catcherMaxSize": 2048000, /* 上传大小限制，单位B */
+    "catcherAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* 抓取图片格式显示 */
 
     /* 上传视频配置 */
     "videoActionName": "uploadvideo", /* 执行上传视频的action名称 */

@@ -45,21 +45,17 @@
 	</header>
     <div class="container">
         <div class="row">
-            <p class="col-md-8"><b>最新文章</b></p>
     		<section class="col-md-8">
-    			<?php if(is_array($article)): $i = 0; $__LIST__ = $article;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?><article class="panel panel-info">
-  <header class="panel-heading">
-  	<a href="/blog/Home/Index/article/id/<?php echo ($article["id"]); ?>" style="display: block;"><span class="glyphicon glyphicon-paperclip"></span><?php echo ($article["title"]); ?></a>
-  </header>
-  <div class="panel-body summary"><?php echo (stristr($article["article"], '</p>', true)); ?></div>
-  <footer class="panel-footer">
-    分类:<a href="/blog/Home/Index/group/label/<?php echo ($article["type"]); ?>" class="rotate"><?php echo ($article["type"]); ?></a>
-    <span class="pull-right"><?php echo (date("Y-m-d h:i:s",$article["posttime"])); ?></span>
-	</footer>
-</article><?php endforeach; endif; else: echo "" ;endif; ?>
-<div class="page">
-  <?php echo ($page); ?>
-</div>
+    			<article class="panel panel-info">
+					<header class="panel-heading text-center">
+						<p><b><?php echo ($article["title"]); ?></b></p>
+					</header>
+					<div id="panel-body" class="panel-body"><?php echo ($article["article"]); ?></div>
+					<footer class="panel-footer">
+					    分类:<a href="/blog/Home/Index/group/label/<?php echo ($article["type"]); ?>" class="rotate"><?php echo ($article["type"]); ?></a>
+					    <span class="pull-right"><?php echo (date("Y-m-d h:i:s",$article["posttime"])); ?></span>
+					</footer>
+				</article>
     		</section>
             <aside class="col-md-3 col-md-offset-1">
                 <div class=" panel panel-info">
