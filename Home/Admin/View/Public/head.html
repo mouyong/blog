@@ -5,8 +5,25 @@
         <title>蜗牛-个人博客后台管理页面</title>
         <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Images/favicon.ico" />
         <load href="__PUBLIC__/Js/jquery.js" />
-        <!-- 最新的 Bootstrap 核心 CSS 文件 -->
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css"> -->
         <load href="__PUBLIC__/Css/admin/admin.css" />
     </head>
     <body>
+    	<div class="modal fade" id="warning" tabindex="-1">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title text-danger" id="myModalLabel">Warning</h4>
+			      </div>
+			      <div class="modal-body text-danger bg-danger">
+			        Are you sure to delete?
+			      </div>
+			      <div class="modal-footer">
+			        <a href="__ROOT__/Snail/Index/del/id/<{$article.id}>" class="btn btn-danger">Yes</a>
+			        <button class="btn btn-default" data-dismiss="modal">No</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>

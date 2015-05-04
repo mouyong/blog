@@ -1,12 +1,12 @@
 <volist name="article" id="article">
 <article class="panel panel-info">
-    <header class="panel-heading">
-    	<a href="__ROOT__/Home/Index/article/id/<{$article.id}>" style="display: block;"><span class="glyphicon glyphicon-paperclip"></span><{$article.title}></a>
-    </header>
-    <div class="panel-body summary"><{$article.article|stristr=###, '</p>', true}></div>
-    <footer class="panel-footer">
-	    分类:<a href="__ROOT__/Home/Index/group/label/<{$article.type}>" class="rotate"><{$labels}></a>
-	    <span class="pull-right"><{$article.posttime|date="Y-m-d h:i:s",###}></span>
+  <header class="panel-heading">
+  	<a href="__ROOT__/Home/Index/article/id/<{$article.id}>" style="display: block;"><span class="glyphicon glyphicon-paperclip"></span><{$article.title}></a>
+  </header>
+  <div class="panel-body summary"><{$article.article|stristr=###, '</p>', true}></div>
+  <footer class="panel-footer">
+    分类:<a href="__ROOT__/Home/Index/group/label/<{$article.type}>" class="rotate"><{$labels}></a>
+    <span class="pull-right"><{$article.posttime|date="Y-m-d h:i:s",###}></span>
 	</footer>
 </article>
 </volist>

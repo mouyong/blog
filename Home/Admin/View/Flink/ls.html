@@ -1,4 +1,5 @@
 <a href="__ROOT__/Snail/Flink/save" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+<div class="table-responsive">
 	<table class="table table-striped">
 		<tr>
 			<th class="col-md-3">网站名称</th>
@@ -18,8 +19,9 @@
 			</td>
 			<td>
 				<a href="__ROOT__/Snail/Flink/modify/id/<{$flink.id}>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
-				<a href="__ROOT__/Snail/Flink/del/id/<{$flink.id}>" class="btn btn-danger" onclick="return confirm('真的要删除吗?此操作不可恢复!')"><span class="glyphicon glyphicon-remove"></span></a>
+				<button data-toggle="modal" data-target="#warning" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
 			</td>
 		</tr>
 		</volist>
 	</table>
+</div>
