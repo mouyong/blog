@@ -1,8 +1,8 @@
 <include file="Public/head" />
     <include file="Public/nav" />
-    <form action="__ROOT__/Snail/Flink/update" method="post" class="container">
+    <form action="__ROOT__/Snail/<?php echo CONTROLLER_NAME ;?>/update" method="post" class="container">
     	<table class="table">
-    		<caption>Modified a Flink</caption>
+    		<caption>Modified a <?php echo CONTROLLER_NAME ;?></caption>
 			<input type="hidden" name="id" value="<{$id}>" />
 			<tr>
 				<td>

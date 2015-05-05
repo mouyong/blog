@@ -1,8 +1,8 @@
 <include file="Public/head" />
     <include file="Public/nav" />
-	<form action="__ROOT__/Snail/Flink/add" method="post" class="container">
+	<form action="__ROOT__/Snail/<?php echo CONTROLLER_NAME ;?>/add" method="post" class="container">
 		<table class="table">
-			<caption>Add a new Flink</caption>
+			<caption>Add a new <?php echo CONTROLLER_NAME ;?></caption>
 			<tr>
 				<td>
 					<input type="text" name="webname" placeholder="WebName" />

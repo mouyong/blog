@@ -3,12 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <title>蜗牛-个人博客后台管理页面</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/blog/Public/Images/favicon.ico" />
-        <script type="text/javascript" src="/blog/Public/Js/jquery.js"></script>
-        <link rel="stylesheet" href="/blog/Public/Css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="/blog/Public/Css/admin/admin.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="/snail/Public/Images/favicon.ico" />
+        <script type="text/javascript" src="/snail/Public/Js/jquery.js"></script>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="/snail/Public/Css/bootstrap.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="/snail/Public/Css/admin/admin.css" />
     </head>
     <body>
+    	<div class="modal fade" id="warning" tabindex="-1">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title text-danger" id="myModalLabel">Warning</h4>
+		      </div>
+		      <div class="modal-body text-danger bg-danger">
+		        Are you sure to delete?
+		      </div>
+		      <div class="modal-footer">
+		        <a href="/snail/Snail/CONTROLLER_NAME/del/id/<?php echo ($article["id"]); ?>" class="btn btn-danger">Yes</a>
+		        <button class="btn btn-default" data-dismiss="modal">No</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
     <header class="navbar navbar-default navbar-fixed-top">
 	<nav class="container">
 		<div class="navbar-header">
@@ -18,16 +36,16 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="/blog" class="navbar-brand"><b>蜗牛--博客</b></a>
+			<a href="/snail" class="navbar-brand"><b>蜗牛--博客</b></a>
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav nav-tabs navbar-right">
-				<?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i; if($nav["model"] == 0 && $nav["display"] == 1 ): ?><li class="center-block"><a href="/blog/<?php echo ($nav["path"]); ?>"><?php echo ($nav["zhli"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+				<?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i; if($nav["model"] == 0 && $nav["display"] == 1 ): ?><li class="center-block"><a href="/snail/<?php echo ($nav["path"]); ?>"><?php echo ($nav["zhli"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 			</ul>
 		</div>
 	</nav>
 </header>
-    <form action="/blog/Snail/Nav/update" method="post" class="container">
+    <form action="/snail/Snail/Nav/update" method="post" class="container">
     	<table class="table">
     		<caption>Modified a Nav</caption>
 			<input type="hidden" name="id" value="<?php echo ($id); ?>" />
@@ -65,9 +83,9 @@
 		</table>
 			<input type="submit" value="Modified" />
 	</form>
-        <script src="/blog/Public/Js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/blog/Public/Js/index.js"></script>
-        <script type="text/javascript" src="/blog/Public/Js/append.js"></script>
+        <script src="/snail/Public/Js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/snail/Public/Js/index.js"></script>
+        <script type="text/javascript" src="/snail/Public/Js/append.js"></script>
         <script>
         $(function(){
             var obj=null;

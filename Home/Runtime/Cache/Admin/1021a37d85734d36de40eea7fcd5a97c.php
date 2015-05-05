@@ -5,14 +5,12 @@
         <title>蜗牛-个人博客后台管理页面</title>
         <link rel="shortcut icon" type="image/x-icon" href="/snail/Public/Images/favicon.ico" />
         <script type="text/javascript" src="/snail/Public/Js/jquery.js"></script>
-        <meta http-equiv="Refresh" content="3; url=/snail/Snail/Index/article" />
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="/snail/Public/Css/bootstrap.min.css"> -->
         <link rel="stylesheet" type="text/css" href="/snail/Public/Css/admin/admin.css" />
     </head>
     <body>
-	<div class="container">
-		<header class="navbar navbar-default navbar-fixed-top">
+    <header class="navbar navbar-default navbar-fixed-top">
 	<nav class="container">
 		<div class="navbar-header">
 			<button id="icon-bar" class="collapsed navbar-toggle" data-target="#navbar" data-toggle="collapse">
@@ -30,12 +28,31 @@
 		</div>
 	</nav>
 </header>
-		<section id="main">
-		    <h1>
-	<b>Welcome to my blog management background　:)</b>
-</h1>
-		</section>
-	</div>
+    <form action="/snail/Snail/<?php echo CONTROLLER_NAME ;?>/update" method="post" class="container">
+    	<table class="table">
+    		<caption>Modified a <?php echo CONTROLLER_NAME ;?></caption>
+			<input type="hidden" name="id" value="<?php echo ($id); ?>" />
+			<tr>
+				<td>
+					<input type="text" name="webname" value="<?php echo ($flink["webname"]); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="url" name="url" value="<?php echo ($flink["url"]); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php switch($flink["display"]): case "1": ?><input type="radio" id="block" name="display" value="1" checked /><label for="block">显示</label>
+							<input type="radio" id="none" name="display" value="0" /><label for="none">隐藏</label><?php break;?>
+						<?php case "0": ?><input type="radio" id="block" name="display" value="1" /><label for="block">显示</label>
+							<input type="radio" id="none" name="display" value="0" checked /><label for="none">隐藏</label><?php break; endswitch;?>
+				</td>
+			</tr>
+		</table>
+			 <input type="submit" value="Modified" />
+	</form>
         <script src="/snail/Public/Js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/snail/Public/Js/index.js"></script>
         <script type="text/javascript" src="/snail/Public/Js/append.js"></script>

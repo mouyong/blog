@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>蜗牛-个人博客</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/blog/Public/Images/favicon.ico" />
-    <script type="text/javascript" src="/blog/Public/Js/jquery.js"></script>
+    <meta name="keywords" content="蜗牛,个人博客,博客,PHP" />
+    <meta name="description" content="蜗牛的个人博客,关于蜗牛的PHP学习成长日记" />
+    <meta name="author" content="iwnweb.com" />
+    <link rel="shortcut icon" type="image/x-icon" href="/snail/Public/Images/favicon.ico" />
+    <script type="text/javascript" src="/snail/Public/Js/jquery.js"></script>
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="/blog/Public/Css/bootstrap.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="/blog/Public/Css/home/index.css" />
-    <link rel="stylesheet" type="text/css" href="/blog/Public/Css/home/animation.css" />
+	<!-- <link rel="stylesheet" href="/snail/Public/Css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="/snail/Public/Css/home/index.css" />
+    <link rel="stylesheet" type="text/css" href="/snail/Public/Css/home/animation.css" />
     </head>
     <body>
     <header class="navbar navbar-default navbar-fixed-top">
@@ -22,7 +25,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="/blog" class="navbar-brand"><b>蜗牛--博客</b></a>
+					<a href="/snail" class="navbar-brand"><b>蜗牛--博客</b></a>
 					<div style="width: 16.5rem;overflow: hidden;display: inline-block">
 						<iframe style="margin-top: 0.5rem;" allowtransparency="true" frameborder="0" width="180" height="36" scrolling="no" src="http://tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=0&v=0&d=3&bd=0&k=000000&f=&q=1&e=1&a=1&c=54511&w=180&h=36&align=center"></iframe>
 					</div>
@@ -30,10 +33,10 @@
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav nav-pills navbar-right">
 					<?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><li>
-							<?php if($nav["zhli"] == '首　　页'): ?><a href="/blog">
+							<?php if($nav["zhli"] == '首　　页'): ?><a href="/snail">
 									<span class="glyphicon glyphicon-home"></span>
 							<?php else: ?>
-				                <a href="/blog/<?php echo ($nav["path"]); ?>">
+				                <a href="/snail/<?php echo ($nav["path"]); ?>">
 				                	<span>&nbsp;&nbsp;&nbsp;</span><?php endif; ?>
 					                <span><?php echo ($nav["zhli"]); ?></span><span style="text-align: center;"><?php echo ($nav["enli"]); ?></span>
 								</a>
@@ -49,11 +52,11 @@
     		<section class="col-md-8">
     			<?php if(is_array($article)): $i = 0; $__LIST__ = $article;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?><article class="panel panel-info">
   <header class="panel-heading">
-  	<a href="/blog/Home/Index/article/id/<?php echo ($article["id"]); ?>" style="display: block;"><span class="glyphicon glyphicon-paperclip"></span><?php echo ($article["title"]); ?></a>
+  	<a href="/snail/Home/Index/article/id/<?php echo ($article["id"]); ?>" style="display: block;"><span class="glyphicon glyphicon-paperclip"></span><?php echo ($article["title"]); ?></a>
   </header>
   <div class="panel-body summary"><?php echo (stristr($article["article"], '</p>', true)); ?></div>
   <footer class="panel-footer">
-    分类:<a href="/blog/Home/Index/group/label/<?php echo ($article["type"]); ?>" class="rotate"><?php echo ($article["type"]); ?></a>
+    分类:<a href="/snail/Home/Index/group/label/<?php echo ($article["type"]); ?>" class="rotate"><?php echo ($article["type"]); ?></a>
     <span class="pull-right"><?php echo (date("Y-m-d h:i:s",$article["posttime"])); ?></span>
 	</footer>
 </article><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -65,7 +68,7 @@
                 <div class=" panel panel-info">
   <p class="text-center panel-heading">标签云</p>
   <div class="panel-body">
-    <?php if(is_array($label)): $i = 0; $__LIST__ = $label;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$label): $mod = ($i % 2 );++$i;?><span class="text-center rotate"><a href="/blog/Home/Index/group/label/<?php echo ($label["label"]); ?>"><?php echo ($label["labels"]); ?></a></span><?php endforeach; endif; else: echo "" ;endif; ?>
+    <?php if(is_array($label)): $i = 0; $__LIST__ = $label;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$label): $mod = ($i % 2 );++$i;?><span class="text-center rotate"><a href="/snail/Home/Index/group/label/<?php echo ($label["label"]); ?>"><?php echo ($label["labels"]); ?></a></span><?php endforeach; endif; else: echo "" ;endif; ?>
   </div>
 </div>
             </aside>
@@ -82,9 +85,9 @@
             </p>
         </div>
     </footer>
-    <script src="/blog/Public/Js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/blog/Public/Js/index.js"></script>
-    <script type="text/javascript" src="/blog/Public/Js/append.js"></script>
+    <script src="/snail/Public/Js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/snail/Public/Js/index.js"></script>
+    <script type="text/javascript" src="/snail/Public/Js/append.js"></script>
     <script>
     $(function(){
         var obj=null;

@@ -1,4 +1,4 @@
-<a href="__ROOT__/Snail/About/save" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+<a href="__ROOT__/Snail/<?php echo CONTROLLER_NAME ;?>/save" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
 <div class="table-responsive">
 	<table class="table table-striped">
 		<tr>
@@ -18,8 +18,11 @@
 			</switch>
 			</td>
 			<td>
-				<a href="__ROOT__/Snail/About/modify/id/<{$about.id}>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="__ROOT__/Snail/<?php echo CONTROLLER_NAME ;?>/modify/id/<{$about.id}>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
 				<button data-toggle="modal" data-target="#warning" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+				<include file="Public/modal_head" />
+					<a href="__ROOT__/Snail/<?php echo CONTROLLER_NAME ;?>/del/id/<{$about.id}>" class="btn btn-danger">Yes</a>
+				<include file="Public/modal_footer" />
 			</td>
 		</tr>
 		</volist>

@@ -53,7 +53,7 @@ class IndexController extends CommonController {
      */
     public function article() {
         parent::_nav();
-        parent::_page('article', 'id, type, label, title, article, display', 15);
+        $id = parent::_page('article', 'id, type, label, title, article, display', 15);
         
         $this->display();
     }
