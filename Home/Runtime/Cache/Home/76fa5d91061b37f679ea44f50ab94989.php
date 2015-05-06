@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>蜗牛-个人博客</title>
-    <meta name="keywords" content="蜗牛,个人博客,博客,PHP" />
+    <meta name="keywords" content="蜗牛-个人博客,蜗牛,个人博客,博客,PHP" />
     <meta name="description" content="蜗牛的个人博客,关于蜗牛的PHP学习成长日记" />
     <meta name="author" content="iwnweb.com" />
     <link rel="shortcut icon" type="image/x-icon" href="/snail/Public/Images/favicon.ico" />

@@ -7,6 +7,7 @@
         <script type="text/javascript" src="/snail/Public/Js/jquery.js"></script>
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="/snail/Public/Css/bootstrap.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="/snail/Public/Css/admin/login.css" />
         <link rel="stylesheet" type="text/css" href="/snail/Public/Css/admin/admin.css" />
     </head>
     <body>
@@ -20,6 +21,7 @@
         <script type="text/javascript" src="/snail/Public/Js/jquery.js"></script>
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="/snail/Public/Css/bootstrap.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="/snail/Public/Css/admin/login.css" />
         <link rel="stylesheet" type="text/css" href="/snail/Public/Css/admin/admin.css" />
     </head>
     <body>

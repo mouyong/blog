@@ -4,6 +4,11 @@ namespace Admin\Controller;
  * 后台管理
  */
 class IndexController extends CommonController {
+    // public function _before_index() {
+    //     if(!isset($_SESSION['username']) || $_SESSION['username']==''){
+    //         $this->redirect('Login/index');
+    //     }
+    // }
     /**
      * 调用后台管理页面
      */

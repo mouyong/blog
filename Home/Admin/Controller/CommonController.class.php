@@ -4,6 +4,11 @@ namespace Admin\Controller;
  * Common
  */
 class CommonController extends \Think\Controller {
+    // public function _initialize() {
+    //     if(!isset($_SESSION['username']) || $_SESSION['username']==''){
+    //         $this->redirect('Login/index');
+    //     }
+    // }
     /**
      * 生成验证码
      */
@@ -172,7 +177,7 @@ class CommonController extends \Think\Controller {
      * @param string $table 查询的表
      */
     protected function _update($table = '') {
-        $table = M($table);
+        $table = D($table);
 
         $count = $table->where('id = '.$_POST['id'])->save($_POST);
         if($count > 0) {

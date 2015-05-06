@@ -11,6 +11,7 @@ return array(
 	'URL_ROUTER_RULES' => array(
 			//'a' => 'Index/about',
 		),
+	'URL_HTML_SUFFIX' => '',//将默认的html后缀修改为空
 	'URL_MODULE_MAP' => array('snail' => 'admin'),
 	'TMPL_EXCEPTION_FILE' => APP_PATH.'/Public/exception.tpl',
 	'LOG_RECORD' => true,
